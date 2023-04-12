@@ -5,6 +5,12 @@ import App from "./App";
 
 // console.log("this is elem", document.getElementById("root"));
 
+// const elem = document.getElementById("root");
+// console.log({ elem });
+
+// const el = React.createElement("div", {}, "asdfasdfsadf");
+// console.log({ el });
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // console.log({ root });
 
