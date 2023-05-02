@@ -1,7 +1,15 @@
+import React from "react";
+import { Card } from "../Card/Card";
+import "./index.css";
 
-import React from 'react'
+export const CardList = ({ cards }) => {
 
-export const CardList = (props) => {
-    // console.log(props);
-    return <div>this is CardList</div>
-}
+
+  return (
+    <div className="cards">
+      {cards.map((item) => {
+        return <Card key={item.updated_at} {...item} product={item} />;
+      })}
+    </div>
+  );
+};

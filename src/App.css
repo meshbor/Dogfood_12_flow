@@ -1,9 +1,7 @@
-.App {
-  /* background-color: red; */
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+.app__light {
+    background-color: white;
+}
+
+.app__dark {
+    background-color: darkgray;
 }
