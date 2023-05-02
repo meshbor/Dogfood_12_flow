@@ -4,7 +4,7 @@ import './index.css';
 // import { Logo } from '../Logo/Logo';
 
 import { ReactComponent as LogoSvg } from '../Logo/logo.svg';
-import styles from './style.module.css'
+// import styles from './style.module.css'
 import { Search } from '../Search/Search';
 import { useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
