@@ -12,7 +12,7 @@ import { ProductPage } from "./pages/ProductPage/ProductPage";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { FavoritesPage } from "./pages/FavoritesPage/FavoritesPage";
 import { RouterAuth } from "./router/Router";
-import { UserContext } from './context/userContext'
+import { UserContext } from "./context/userContext"
 import { CardsContext } from "./context/cardContext";
 import { ThemeContext } from "./context/themeContext";
 import { filteredCards, findLiked } from "./utils/utils";
@@ -91,7 +91,7 @@ function App() {
 
 
   useEffect(() => {
-    if (debounceValueInApp === undefined) return;
+    if (debounceValueInApp === undefined) {return;}
     api.searchProducts(debounceValueInApp)
       .then((data) => setCards(filteredCards(data)))
   }, [debounceValueInApp]);
@@ -120,7 +120,7 @@ function App() {
 
   return (
 
-    <div className={`app__${theme ? 'light' : 'dark'} `}>
+    <div className={`app__${theme ? "light" : "dark"} `}>
       <ThemeContext.Provider value={theme}>
         <CardsContext.Provider value={cardsValue}>
           <UserContext.Provider value={user}>
@@ -138,7 +138,7 @@ function App() {
                   <Route path="*" element={<div>NOT FOUND 404</div>} />
                 </Routes>
                 :
-                <Navigate to={'/not-found'} />
+                <Navigate to={"/not-found"} />
               }
             </main>
             <Footer />
