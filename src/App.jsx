@@ -18,6 +18,7 @@ import { CardsContext } from "./context/cardContext";
 import { ThemeContext } from "./context/themeContext";
 import { filteredCards, findLiked } from "./utils/utils";
 import { CHEAPEST, EXPENSIVE, NEWEST, POPULAR, RATE, SALE } from "./constants/constants";
+import { AntdPage } from "./pages/AntdPage/AntdPage";
 
 
 function App() {
@@ -136,6 +137,8 @@ function App() {
                   <Route path="/favorites" element={<FavoritesPage />} />
                   <Route path="/product/:id" element={<ProductPage />} >
                   </Route>
+                  <Route path="/antd" element={<AntdPage />} />
+
                   <Route path="*" element={<div>NOT FOUND 404</div>} />
                 </Routes>
                 :
